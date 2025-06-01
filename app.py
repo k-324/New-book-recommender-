@@ -5,7 +5,7 @@ from utils.summarizer import extract_summary
 from urllib.parse import quote
 
 # 🚨 請務必放在最上面
-st.set_page_config(page_title="書籍推薦系統", layout="wide")
+st.set_page_config(page_title="Book一試", layout="wide")
 
 # 讀取資料
 df = pd.read_csv("haodoo_books.csv")
@@ -14,8 +14,8 @@ df = pd.read_csv("haodoo_books.csv")
 df["搜尋欄位"] = df["書名"].fillna("") + df["作者"].fillna("") + df["分類"].fillna("") + df["內容"].fillna("")
 
 # 標題
-st.markdown("## 📚 書籍推薦系統")
-keyword = st.text_input("輸入你想找的書籍主題・關鍵字：", "")
+st.markdown("## 📚 Book一試")
+keyword = st.text_input("今天的心情需要什麼書呢：", "療癒小品、成長一下⋯⋯")
 
 # 搜尋邏輯
 if keyword:
